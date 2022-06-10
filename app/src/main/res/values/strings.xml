@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppBook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_a_book">Add a Book</string>
+    <string name="search_image">Search Image</string>
+    <string name="summary">Summary</string>
+    <string name="book_cover">Book Cover</string>
+    <string name="author">Author:</string>
+</resources>

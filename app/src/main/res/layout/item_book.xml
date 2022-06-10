@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/dark_blue"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/imageBook"
+            android:layout_width="100dp"
+            android:layout_height="160dp"
+            android:layout_margin="8dp"
+            tools:src="@drawable/book2"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/book_cover" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/imageBook"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="20sp"
+            tools:text="L'Art d'avoir toujours raison" />
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_toEndOf="@id/imageBook"
+            android:text="@string/author"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvAuthor"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginStart="6dp"
+            tools:text="Dale Carnegie"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAuthor"
+            android:layout_toEndOf="@id/imageBook"
+            android:progressTint="#C32C2C"
+            android:secondaryProgressTint="#FFEB3B"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            tools:rating="3"/>
+
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@id/imageBook"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textSize="12sp"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvSummary"
+            android:layout_toEndOf="@id/imageBook"
+            android:text="@string/summary"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
