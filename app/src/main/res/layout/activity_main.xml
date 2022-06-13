@@ -64,13 +64,12 @@
         tools:listitem="@layout/item_book" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/HomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:autofillHints="name"
-        android:src="@android:drawable/ic_input_add"
+        android:src="@drawable/ic_baseline_home_24"
         app:layout_constraintBottom_toBottomOf="@+id/RecycleViewBooks"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints"

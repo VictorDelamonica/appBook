@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var booksAdapter: BooksAdapter
     private lateinit var imageSearch: ImageView
     private lateinit var editSearch: EditText
+    private lateinit var homeButton: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewBooks = findViewById(R.id.RecycleViewBooks)
         imageSearch = findViewById(R.id.imageSearch)
         editSearch = findViewById(R.id.editSearch)
+        homeButton = findViewById(R.id.HomeButton)
 
         val items = listOf(
             Book("Le Banquet/Phèdre", "Symposium attempts to find the ultimate manifestation of the love that controls the world, leading to mystic union with eternal & supercosmic beauty. Phaedrus discusses the psychology of love, resulting in the concept of the familiar Platonic \"forms\" as objects of transcendental emotion.", R.drawable.book1, 3.99F, "Platon"),
@@ -49,6 +52,12 @@ class MainActivity : AppCompatActivity() {
         })
 
         imageSearch.setOnClickListener {
+            val search = editSearch.text.toString()
+            booksAdapter.filter.filter(search)
+            editSearch.text.clear()
+        }
+
+        homeButton.setOnClickListener{
             val search = editSearch.text.toString()
             booksAdapter.filter.filter(search)
             editSearch.text.clear()
